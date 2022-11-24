@@ -22,7 +22,7 @@ public class Test
         var _Buffer = new byte[N];
         new Random(42).NextBytes(_Buffer);
 
-        int[] bytesAsInts = Array.ConvertAll(_Buffer, c => (int)c);
+        data = Array.ConvertAll(_Buffer, c => (int)c);
     }
 
     [BenchmarkDotNet.Attributes.Benchmark]
