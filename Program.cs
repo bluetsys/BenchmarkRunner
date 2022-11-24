@@ -13,7 +13,7 @@ public class Test
 {
     private int[] data;
 
-    [Params(1000, 10000)]
+    [Params(100, 1000)]
     public int N;
 
     [GlobalSetup]
@@ -25,11 +25,11 @@ public class Test
         data = Array.ConvertAll(_Buffer, c => (int)c);
     }
 
-    [BenchmarkDotNet.Attributes.Benchmark]
-	public double MethodIf()
-	{
-		return double.MaxValue % 2;
-	}
+ //   [BenchmarkDotNet.Attributes.Benchmark]
+	//public double MethodIf()
+	//{
+	//	return double.MaxValue % 2;
+	//}
 
     [BenchmarkDotNet.Attributes.Benchmark]
     public double Linq()
